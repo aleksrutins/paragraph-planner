@@ -7,10 +7,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<title>Paragraph Planner</title>
 	</head>
-	<body class="d-flex flex-column justify-content-center align-items-center bg-light" style="width: 100vw; height: 100vh">
+	<body class="d-flex flex-column justify-content-center align-items-center bg-light"  x-data="{showBody: true}" style="width: 100vw; height: 100vh">
 		<h1 class="mb-5">Paragraph Planner</h1>
-		<div class="d-flex flex-row justify-content-center">
-			<div class="shadow p-3 m-5 bg-white rounded" style="max-width: 50%; overflow-y: auto; max-height: 90%;">
+		<button class="btn d-block btn-outline-primary" @click="showBody = !showBody">Switch View</button>
+		<div class="d-flex flex-row justify-content-center w-100">
+			<div class="shadow p-3 m-5 bg-white rounded" style="min-width: 45%; max-width: 50%; overflow-y: auto; max-height: 90%;" x-show="showBody">
 				<div x-data="{topicSentence: '', ctxDetails: '', embedQuote: '', commentary: '', bigPicture: ''}" class="card-body">
 					<h1 class="w-100 text-center">Body Paragraph</h1>
 					<h2 class="w-100 text-center" style="color: green">Topic Sentence</h2>
@@ -27,7 +28,7 @@
 					<p x-text="topicSentence + ' ' + ctxDetails + ' ' + embedQuote + ' ' + commentary + ' ' + bigPicture"></p>
 				</div>
 			</div>
-			<div class="shadow p-3 m-5 bg-white rounded" style="max-width: 50%; overflow-y: auto; max-height: 90%;">
+			<div class="shadow p-3 m-5 bg-white rounded" style="min-width: 45%; max-width: 50%; overflow-y: auto; max-height: 90%;" x-show="!showBody">
 				<div x-data="{topicSentence: '', ctxDetails: '', embedQuote: '', commentary: '', bigPicture: ''}" class="card-body">
 					<h1 class="w-100 text-center">Conclusion Paragraph</h1>
 					<b class="d-block w-100 text-center" style="color: green">How are the ideas in your paper true in the real world of today?</b>
