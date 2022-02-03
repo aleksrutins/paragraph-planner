@@ -9,20 +9,36 @@
 	</head>
 	<body class="d-flex flex-column justify-content-center align-items-center bg-light" style="width: 100vw; height: 100vh">
 		<h1 class="mb-5">Paragraph Planner</h1>
-		<div class="shadow p-3 mb-5 bg-white rounded" style="max-width: 50%; overflow-y: auto; max-height: 90%;">
-			<div x-data="{topicSentence: '', ctxDetails: '', embedQuote: '', commentary: '', bigPicture: ''}" class="card-body">
-				<h2 class="w-100 text-center" style="color: green">Topic Sentence</h2>
-				<textarea class="w-100" style="resize: vertical;" x-model="topicSentence"></textarea>
-				<h2 class="w-100 text-center" style="color: red">Context Details</h2>
-				<textarea class="w-100" style="resize: vertical;" x-model="ctxDetails"></textarea>
-				<h2 class="w-100 text-center" style="color: orange">Embedded Quote</h2>
-				<textarea class="w-100" style="resize: vertical;" x-model="embedQuote"></textarea>
-				<h2 class="w-100 text-center" style="color: purple">Commentary</h2>
-				<textarea class="w-100" style="resize: vertical;" x-model="commentary"></textarea>
-				<h2 class="w-100 text-center" style="color: brown">Big Picture Commentary</h2>
-				<textarea class="w-100" style="resize: vertical;" x-model="bigPicture"></textarea>
-				<hr>
-				<p x-text="topicSentence + ' ' + ctxDetails + ' ' + embedQuote + ' ' + commentary + ' ' + bigPicture"></p>
+		<div class="d-flex flex-row justify-content-center">
+			<div class="shadow p-3 m-5 bg-white rounded" style="max-width: 50%; overflow-y: auto; max-height: 90%;">
+				<div x-data="{topicSentence: '', ctxDetails: '', embedQuote: '', commentary: '', bigPicture: ''}" class="card-body">
+					<h1 class="w-100 text-center">Body Paragraph</h1>
+					<h2 class="w-100 text-center" style="color: green">Topic Sentence</h2>
+					<textarea class="w-100" style="resize: vertical;" x-model="topicSentence"></textarea>
+					<h2 class="w-100 text-center" style="color: red">Context Details</h2>
+					<textarea class="w-100" style="resize: vertical;" x-model="ctxDetails"></textarea>
+					<h2 class="w-100 text-center" style="color: orange">Embedded Quote</h2>
+					<textarea class="w-100" style="resize: vertical;" x-model="embedQuote"></textarea>
+					<h2 class="w-100 text-center" style="color: purple">Commentary</h2>
+					<textarea class="w-100" style="resize: vertical;" x-model="commentary"></textarea>
+					<h2 class="w-100 text-center" style="color: brown">Big Picture Commentary</h2>
+					<textarea class="w-100" style="resize: vertical;" x-model="bigPicture"></textarea>
+					<hr>
+					<p x-text="topicSentence + ' ' + ctxDetails + ' ' + embedQuote + ' ' + commentary + ' ' + bigPicture"></p>
+				</div>
+			</div>
+			<div class="shadow p-3 m-5 bg-white rounded" style="max-width: 50%; overflow-y: auto; max-height: 90%;">
+				<div x-data="{topicSentence: '', ctxDetails: '', embedQuote: '', commentary: '', bigPicture: ''}" class="card-body">
+					<h1 class="w-100 text-center">Conclusion Paragraph</h1>
+					<b class="d-block w-100 text-center" style="color: green">How are the ideas in your paper true in the real world of today?</b>
+					<textarea class="w-100" style="resize: vertical;" x-model="topicSentence"></textarea>
+					<b class="d-block w-100 text-center" style="color: red">Why is this book itself important or meaningful in the time it was written? Now in 2022?</b>
+					<textarea class="w-100" style="resize: vertical;" x-model="ctxDetails"></textarea>
+					<b class="d-block w-100 text-center" style="color: orange">What can individuals take away from this? How should the ideas in your essay affect the way we live?</b>
+					<textarea class="w-100" style="resize: vertical;" x-model="embedQuote"></textarea>
+					<hr>
+					<p x-text="topicSentence + ' ' + ctxDetails + ' ' + embedQuote"></p>
+				</div>
 			</div>
 		</div>
 	</body>
